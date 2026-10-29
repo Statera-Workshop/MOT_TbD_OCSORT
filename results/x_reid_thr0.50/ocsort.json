@@ -1,0 +1,100 @@
+{
+ "tracker": "ocsort",
+ "run": "kittimots_x_reid_thr0.50",
+ "source": "kittimots",
+ "split": "val",
+ "detections": {
+  "version": "x",
+  "weights": "runs/image_x/checkpoints/image_x_kittimots_e030.pth",
+  "source": "kittimots",
+  "split": "val",
+  "input": "1216x384",
+  "conf": 0.05,
+  "classes": [
+   "car",
+   "pedestrian"
+  ],
+  "epoch": 30,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "torch": "2.5.1+cu124",
+  "det_ms_median": 5.484467001224402,
+  "det_ms_p95": 5.700026995327789,
+  "params_M": 2.241845,
+  "reid_weights": "/home/minsoogo/Physical_AI/projects/dev3_mot_det_wide/runs/reid/reid_r18_kittimots.pth",
+  "reid_min_score": 0.1,
+  "reid_ms_median": 2.972245931625366,
+  "reid_ms_p95": 5.027470111846924,
+  "reid_val": {
+   "car": {
+    "rank1": 0.946,
+    "mAP": 0.6400399259113395,
+    "queries": 500
+   },
+   "pedestrian": {
+    "rank1": 0.9644670050761421,
+    "mAP": 0.7508108430471819,
+    "queries": 197
+   },
+   "all": {
+    "rank1": 0.9483500717360115,
+    "mAP": 0.6632532977495614,
+    "queries": 697
+   }
+  }
+ },
+ "tracker_ms": {
+  "median": 0.5033540073782206,
+  "p95": 0.98230000003241,
+  "frames": 2981
+ },
+ "detector_ms": {
+  "median": 5.484467029571533,
+  "p95": 5.700026988983154
+ },
+ "reid_ms": null,
+ "score_thr": 0.5,
+ "causal_check": null,
+ "per_class": {
+  "car": {
+   "HOTA": 0.5931084536124933,
+   "DetA": 0.5287410815879195,
+   "AssA": 0.6669503833290438,
+   "LocA": 0.8740244063923088,
+   "MOTA": 0.6018184082700212,
+   "MOTP": 0.8595980839535842,
+   "IDF1": 0.7162601012008156,
+   "IDSW": 32,
+   "Frag": 72,
+   "GT_IDs": null,
+   "CLR_TP": 5038,
+   "CLR_FN": 2991,
+   "CLR_FP": 174
+  },
+  "pedestrian": {
+   "HOTA": 0.2805832026476784,
+   "DetA": 0.2146757602142163,
+   "AssA": 0.3682252126547018,
+   "LocA": 0.7939964304394703,
+   "MOTA": 0.24320286824021511,
+   "MOTP": 0.7664581224679301,
+   "IDF1": 0.40186915887850466,
+   "IDSW": 17,
+   "Frag": 57,
+   "GT_IDs": null,
+   "CLR_TP": 989,
+   "CLR_FN": 2358,
+   "CLR_FP": 158
+  }
+ },
+ "mean": {
+  "HOTA": 0.4368458281300859,
+  "DetA": 0.3717084209010679,
+  "AssA": 0.5175877979918728,
+  "LocA": 0.8340104184158896,
+  "MOTA": 0.42251063825511814,
+  "MOTP": 0.8130281032107571,
+  "IDF1": 0.5590646300396601,
+  "IDSW": 49,
+  "Frag": 129
+ }
+}
